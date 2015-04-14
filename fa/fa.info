@@ -1,0 +1,4 @@
+name = Learn Form API
+description = "module for form API"
+core = 7.x
+version = 1.0

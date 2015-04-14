@@ -1,0 +1,4 @@
+name = Pogoda description
+description = Pogoda description
+core = 7.x
+files[] = pogoda.module

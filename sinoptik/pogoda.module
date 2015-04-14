@@ -1,0 +1,29 @@
+<?php
+function pogoda_block_info () {
+$blocks['pogoda'] = array(
+    'info' => "Out pogoda block"
+);
+return $blocks;
+}
+function pogoda_block_view ($delta = '') {
+    switch($delta) {
+        case 'pogoda':
+            $block['content'] = block_function();
+            break;
+    }
+    return $block;
+}
+function block_function() {
+    $output = theme ('pogoda_template', array( 'variable' => '<a href="https://clck.yandex.ru/redir/dtype=stred/pid=7/cid=1228/*https://pogoda.yandex.ru/cherkassi" target="_blank"><img src="//info.weather.yandex.net/cherkassi/1_white.ru.png?domain=ru" border="0" alt="Яндекс.Погода"/><img width="1" height="1" src="https://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*https://img.yandex.ru/i/pix.gif" alt="" border="0"/></a>' ));
+    return $output;
+}
+function pogoda_theme(){
+    return array(
+        'pogoda_template' => array(
+            'template' => 'pogoda_template',
+            'variables' => array('variable' => 'Vasya')
+        )
+    );
+}
+
+?>
